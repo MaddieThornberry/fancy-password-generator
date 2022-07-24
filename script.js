@@ -21,12 +21,12 @@ function generatePassword(){
 
 // Write password to the #password input
 function writePassword() {
-  getPrompt()
+  var yesPrompt = getPrompt();
+
+  if (yesPrompt) {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  passwordText.value = goodPassword;
 }
 
 function getPrompt() {
@@ -54,6 +54,12 @@ function getPrompt() {
 return true;
 }
 
+function generatePassword () {
+  let (var i = 0; i , passwordLength; i++) {
+    var randomIndex = (math.random) + ChoosenArr.length)
+  }
+}
+
 
 
 
@@ -63,4 +69,4 @@ generateBtn.addEventListener("click", writePassword);
 // 1. create password
 // 2. loop for variables
 // 3. take out unchecked
-// 4. final password fill in
+// 4. final password fill in 
