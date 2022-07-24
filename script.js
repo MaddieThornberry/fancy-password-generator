@@ -32,25 +32,25 @@ function writePassword() {
 function getPrompt() {
   ChoosenArr = [];
 
-    passwordLength = prompt("What is your password length preference? (8-128)");
+  passwordLength = prompt("What is your password length preference? (8-128)");
+  
+  if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     alert("Password must be a number, 8-128");
-    return false; NaN
-}
+    return false;
+  }
 
-if (passwordLength)
-
-if (confirm("Would you like uppercase letters?")) {
+  if (confirm("Would you like uppercase letters?")) {
     ChoosenArr = ChoosenArr.concat(uppercaseLettersArr);
-}
-if (confirm("Would you like lowercase letters?")) {
+  }
+  if (confirm("Would you like lowercase letters?")) {
     ChoosenArr = ChoosenArr.concat(lowercaseLettersArr);
-}
-if (confirm("Would you like numbers?")) {
+  }
+  if (confirm("Would you like numbers?")) {
         ChoosenArr = ChoosenArr.concat(numbersArr);
-}
-if (confirm("Would you like special characters?")) {
+  }
+  if (confirm("Would you like special characters?")) {
     ChoosenArr = ChoosenArr.concat(specialCharactersArr);
-}
+  }
 return true;
 }
 
