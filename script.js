@@ -4,8 +4,20 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
   /* 1. Prompt password criteria
-     2. Criteria length 8-128
-     3.character types (upper, lower, numeric, symbol) */
+     2. Length 8-128
+     3. Character types (upper, lower, numeric, symbol)
+     4. Validate input includes selected parameter
+     5. Generate password
+     6. Display password on screen
+      */
+    var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()":
+    var passwordLenght = 8;
+    var password ="";
+
+    for (var i=0, i <= passwordLenght; i++){
+      var randomChars = Math.floor(Math.random() * chars.length);
+      password += (randomChars)
+    }
 }
 
 // Write password to the #password input
