@@ -10,15 +10,14 @@ function generatePassword(){
      5. Generate password
      6. Display password on screen
       */
-    var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()":
-    var passwordLenght = 8;
-    var password ="";
+    var passwordLength = 8;
+    var ChoosenArr = [];
 
-    for (var i=0, i <= passwordLenght; i++){
-      var randomChars = Math.floor(Math.random() * chars.length);
-      password += chars.substring(randomChars, randomChars +1)
-    }
-}
+    var uppercaseLettersArr = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
+    var lowercaseLettersArr = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+    var numbersArr = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var specialCharactersArr = ["!","@","#","$","%","^","&","*"];
+
 
 // Write password to the #password input
 function writePassword() {
@@ -29,8 +28,33 @@ function writePassword() {
 
 }
 
+function getPrompt() {
+    passwordLength = prompt("What is your password length preference? (8-128)");
+    alert("Password must be a number, 8-128");
+    return false;
+}
+
+if (confirm("Would you like uppercase letters?")) {
+    ChoosenArr = ChoosenArr.concat(uppercaseLettersArr);
+}
+if (confirm("Would you like lowercase letters?")) {
+    ChoosenArr = ChoosenArr.concat(lowercaseLettersArr);
+}
+if (confirm("Would you like numbers?")) {
+        ChoosenArr = ChoosenArr.concat(numbersArr);
+}
+if (confirm("Would you like special characters?")) {
+    ChoosenArr = ChoosenArr.concat(specialCharactersArr);
+}
+return true;
+}
+
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+// console.log = "Button Clicked!"
 // 1. create password
 // 2. loop for variables
 // 3. take out unchecked
