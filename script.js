@@ -34,7 +34,7 @@ function getPrompt() {
 
     passwordLength = prompt("What is your password length preference? (8-128)");
     alert("Password must be a number, 8-128");
-    return false;
+    return false; NaN
 }
 
 if (passwordLength)
