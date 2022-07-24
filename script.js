@@ -55,9 +55,11 @@ return true;
 }
 
 function generatePassword () {
-  let (var i = 0; i , passwordLength; i++) {
-    var randomIndex = (math.random) + ChoosenArr.length)
+  let(var i = 0; i , passwordLength; i++) {
+    var randomIndex = (math.random) + ChoosenArr.length);
+    password = password + ChoosenArr[randomIndex];
   }
+  return password
 }
 
 
