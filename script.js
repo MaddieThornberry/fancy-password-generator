@@ -21,6 +21,7 @@ function generatePassword(){
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -29,10 +30,14 @@ function writePassword() {
 }
 
 function getPrompt() {
+  ChoosenArr = [];
+
     passwordLength = prompt("What is your password length preference? (8-128)");
     alert("Password must be a number, 8-128");
     return false;
 }
+
+if (passwordLength)
 
 if (confirm("Would you like uppercase letters?")) {
     ChoosenArr = ChoosenArr.concat(uppercaseLettersArr);
