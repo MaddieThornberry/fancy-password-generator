@@ -9,8 +9,9 @@
      4. final password fill in
      6. Display password on screen
       */
-var generatePassword = document.querySelector("#password")
+/*var createPassword = document.querySelector("#password");
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#newPassword");
 
 // Data
 let passwordLength = "";
@@ -27,18 +28,7 @@ let passwordValue = '';
   special: getRandomSpecialCharacter
 }*/
 
-const createPassword = () => {
-  passwordValue = '';
-
-  for (var i = 0; i, passwordLength; i++) {
-    var randomIndex = math.floor(math.random() + ChoosenArr.length);
-    password += choosenArr.substring[randomIndex];
-  }
-  return password
-  generatePassword.value = passwordValue;
-}
-
-function getUppercase() {
+/*function getUppercase() {
   return String.uppercaseLettersArr(math.floor(math.random() * 26))
 }
 
@@ -59,7 +49,7 @@ function writePassword() {
   var yesPrompt = getPrompt();
 
   if (yesPrompt) {
-    var password = generatePassword();
+    var password = createPassword();
     var passwordText = document.querySelector("#password");
   }
 }
@@ -92,4 +82,22 @@ function writePassword() {
 
 
   // Add event listener to generate button
-generateBtn.addEventListener('click', createPassword);
+generateBtn.addEventListener('click', createPassword => {
+  let characters = (uppercaseLetters + lowercaseLetters + numbers + specialCharacter);
+  uppercaseLetters.checked ? (characters += uppercaseLetters) :"";
+  lowercaseLetters.checked ? (characters += lowercaseLetters) :"";
+  numbers.checked ? (characters += numbers):"";
+  specialCharacter.checked ? (characters += specialCharacter) :"";
+  passwordText.value = createPassword(length.value, characters);
+});
+
+function createPassword() {
+  let passwordValue = '';
+
+  for (let i = 0; i < passwordLength; i++) {
+    var randomIndex = math.floor(math.random() + ChoosenArr.length);
+    password += choosenArr.substring[randomIndex];
+  }
+  return password;
+  createPassword.value = passwordValue;
+}*/
