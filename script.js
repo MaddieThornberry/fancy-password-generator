@@ -1,10 +1,6 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-function generatePassword() {
-
   /* 
-     1. define variables
+     1. define elements
      2. criteria (length, upper, lower, number, special)
      3. Length 8-128
      4. Prompt password criteria
@@ -13,20 +9,34 @@ function generatePassword() {
      4. final password fill in
      6. Display password on screen
       */
-  var passwordLength = 8;
-  var ChoosenArr = [];
+var generatePassword = document.querySelector("#password")
+var generateBtn = document.querySelector("#generate");
 
-  var uppercaseLetters = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
-  var lowercaseLetters = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
-  var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  var specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*"];
-}
+// Data
+/*var choosenArr = [];*/
+let passwordLength = "";
+let uppercaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+let lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*"];
+let passwordValue = '';
 
-let randomCharacter = {
+/*let choosenArr = {
   upper: getRandomUpper,
   lower: getRandomLower,
   number: getRandomNumber,
   special: getRandomSpecialCharacter
+}*/
+
+const getPassword = () => {
+  passwordValue = '';
+
+  for (var i = 0; i, passwordLength; i++) {
+    var randomIndex = math.floor(math.random() + ChoosenArr.length);
+    password += choosenArr.substring[randomIndex];
+  }
+  return password
+  generatePassword.value = passwordValue;
 }
 
 function getUppercase() {
@@ -52,11 +62,12 @@ function writePassword() {
   if (yesPrompt) {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    passwordText.value = goodPassword;
   }
+}
+
 
   function getPrompt() {
-    ChoosenArr = [];
+    choosenArr = [];
 
     passwordLength = prompt("What is your password length preference? (8-128)");
 
@@ -80,19 +91,11 @@ function writePassword() {
     return true;
   }
 
-  const generatePassword = () => {
-    passwordValue = "";
-
-    for (var i = 0; i, passwordLength; i++) {
-      var randomIndex = math.floor(math.random() + ChoosenArr.length);
-      password = password + ChoosenArr[randomIndex];
-    }
-    return password
-  }
 
   // Add event listener to generate button
-  document.getElementById("btn").addEventListener("click", createPassword);
+ /* document.getElementsByClassName("btn").addEventListener("click", createPassword);
 
   function createPassword() {
-    alert ("Password Generated")
-  }
+    alert ("Password Generated");
+  }*/
+generateBtn.addEventListener('click', createPassword);
