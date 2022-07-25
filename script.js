@@ -80,7 +80,9 @@ function writePassword() {
     return true;
   }
 
-  function generatePassword() {
+  const generatePassword = () => {
+    passwordValue = "";
+
     for (var i = 0; i, passwordLength; i++) {
       var randomIndex = math.floor(math.random() + ChoosenArr.length);
       password = password + ChoosenArr[randomIndex];
@@ -89,18 +91,8 @@ function writePassword() {
   }
 
   // Add event listener to generate button
-  btn.addEventListener("click", writePassword) {
-    const length = +passwordLength.value
-    const hasUpper = uppercaseLetters;
-    const hasLower = lowercaseLetters;
-    const hasNumber = number;
-    const hasSpecial = specialCharacter;
+  document.getElementById("btn").addEventListener("click", createPassword);
 
-    resultPassword.innerText = generatePassword(
-      hasUpper,
-      hasLower,
-      hasNumber,
-      hasSpecial,
-      length
-    );
-  } 
+  function createPassword() {
+    alert ("Password Generated")
+  }
