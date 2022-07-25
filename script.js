@@ -13,7 +13,6 @@ var generatePassword = document.querySelector("#password")
 var generateBtn = document.querySelector("#generate");
 
 // Data
-/*var choosenArr = [];*/
 let passwordLength = "";
 let uppercaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -28,7 +27,7 @@ let passwordValue = '';
   special: getRandomSpecialCharacter
 }*/
 
-const getPassword = () => {
+const createPassword = () => {
   passwordValue = '';
 
   for (var i = 0; i, passwordLength; i++) {
@@ -93,9 +92,4 @@ function writePassword() {
 
 
   // Add event listener to generate button
- /* document.getElementsByClassName("btn").addEventListener("click", createPassword);
-
-  function createPassword() {
-    alert ("Password Generated");
-  }*/
 generateBtn.addEventListener('click', createPassword);
